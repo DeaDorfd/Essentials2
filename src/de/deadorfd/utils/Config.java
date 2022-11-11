@@ -48,5 +48,4 @@ public class Config {
 	public static boolean getBoolean(String path) {
 		return cfg.getBoolean(path);
 	}
-
 }

@@ -30,8 +30,6 @@ import de.deadorfd.utils.WarpAPI;
  */
 public class Essentials2 extends JavaPlugin {
 
-	// Commands: Teleport
-
 	private static Essentials2 instance;
 
 	@Override
