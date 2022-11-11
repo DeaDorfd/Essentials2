@@ -1,0 +1,73 @@
+#Variables: %player% %warpname% %gamemode% %command% %player1%
+Prefix: "&8[&6Essentials 2&8] &7"
+
+# Enable or Disable the Join and Leave Message ingame
+JoinMessage: true
+LeaveMessage: true
+
+# List Warps with permission. If it's disabled, then every user can use the Command with no Permission.
+WarpsPermission: true
+
+Messages:
+    # This Message Comes when JoinMessage is enabled
+    JoinMessage: "The Player &6%player% &7has &2entered &7the Server."
+    
+    # This Message Comes when LeaveMessage is enabled
+    LeaveMessage: "The Player &6%player% has &cleft &7the Server."
+    
+    # Messages for Commands
+    MustPlayer: "You must a Player."
+    WrongCommand: "&cWrong &7Command. Please use &8/%command%"
+    NoPermission: "You have &cno &7right to do that!"
+    NoPlayerFound: "The specified player: &6%player% is &cnot &7online!"
+    GamemodeSet: "You were placed in the &6%gamemode% &7mode."
+    GamemodeSetOther: "You have set &6%player% &7to &6%gamemode% &7mode."
+    TimeDay: "You have change the time to &6day&7."
+    TimeNight: "You have change the time to &6night&7."
+    WeatherSun: "You have change the weather to &6sun&7."
+    WeatherRain: "You have change the weather to &6rain&7."
+    Healed: "You &2have &7been healed."
+    HealedOther: "You &2have &7healed the player &6%player%&7."
+    FlyOn: "Your flight mode has been &2activated&7."
+    FlyOff: "Your flight mode has been &cdeactivated&7."
+    FlyOnOther: "You have &2activated &7the flight mode from &6%player%&7."
+    FlyOffOther: "You have &cdeactivated &7the flight mode from &6%player%&7."
+    VanishOn: "Your Vanish has been &aactivated&7."
+    VanishOff: "Your Vanish has been &cdeactivated&7."
+    WarpNotExists: "This Warp: &6%warpname% does &cnot &7exist."
+    ListWarps: "The Warps on this Server:"
+    WarpSuccess: "You were warped to &6%warpname%&7."
+    WarpDeleted: "The Warp: &6%warpname% &7was deleted."
+    WarpSet: "The Warp: &6%warpname% &7was created."
+    SpawnWasNotSet: "The spawn was &cnot &7set."
+    SpawnSet: "The spawn was &2set&7."
+    SpawnTeleported: "You have been &2teleported &7to the spawn."
+    TeleportToPlayer: "You teleported to &6%player%&7."
+    TeleportPlayerToPlayer: "You have teleported &6%player% &7to &6%player1%&7."
+    
+    
+
+Permissions:
+    Admin: "system.admin"
+    Gamemode: "system.gamemode"
+    Day: "system.day"
+    Night: "system.night"
+    Sun: "system.sun"
+    Rain: "system.rain"
+    Heal: "system.heal"
+    Fly: "system.fly"
+    Vanish: "system.vanish"
+    VanishSee: "system.vanish.see"
+    Warps: "system.listwarps"
+    DeleteWarp: "system.delwarp"
+    SetWarp: "system.setwarp"
+    SetSpawn: "system.setspawn"
+    Teleport: "system.teleport"
+    
+    
+Gamemodes:
+    Survival: "survival"
+    Creative: "creative"
+    Adventure: "adventure"
+    Spectator: "spectator"
+    

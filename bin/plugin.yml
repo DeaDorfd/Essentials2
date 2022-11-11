@@ -1,0 +1,25 @@
+name: Essentials2
+version: 4.0
+author: DeaDorfd
+main: de.deadorfd.main.Essentials2
+
+commands:
+    Gamemode:
+      aliases: [gm]
+    Heal:
+    Day:
+    Night:
+    Sun:
+    Rain:
+    fly:
+    spawn:
+    setspawn:
+    warp:
+    warps:
+    setwarp:
+    delwarp:
+    Vanish:
+      aliases: [v]
+    Teleport:
+      aliases: [tp]
+   
