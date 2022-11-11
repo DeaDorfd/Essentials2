@@ -44,8 +44,6 @@ Messages:
     SpawnTeleported: "You have been &2teleported &7to the spawn."
     TeleportToPlayer: "You teleported to &6%player%&7."
     TeleportPlayerToPlayer: "You have teleported &6%player% &7to &6%player1%&7."
-    
-    
 
 Permissions:
     Admin: "system.admin"
@@ -64,10 +62,8 @@ Permissions:
     SetSpawn: "system.setspawn"
     Teleport: "system.teleport"
     
-    
 Gamemodes:
     Survival: "survival"
     Creative: "creative"
     Adventure: "adventure"
     Spectator: "spectator"
-    
