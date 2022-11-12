@@ -44,8 +44,10 @@ public class Gamemode_CMD implements CommandExecutor {
 			} else if (gamemode.equalsIgnoreCase("3") || gamemode.equalsIgnoreCase("spectator")) {
 				player.setGameMode(GameMode.SPECTATOR);
 				player.sendMessage(getString("Prefix") + getGamemodeMessage("Spectator"));
-			} else
+			} else {
 				player.sendMessage(wrongCommand("Gamemode <gamemode> <Player-Name>"));
+				return true;
+			}
 		} else if (args.length == 2) {
 			Player target = Bukkit.getPlayer(args[1]);
 			if (target == null) {
@@ -69,10 +71,14 @@ public class Gamemode_CMD implements CommandExecutor {
 				target.setGameMode(GameMode.SPECTATOR);
 				target.sendMessage(getString("Prefix") + getGamemodeMessage("spectator"));
 				player.sendMessage(getString("Prefix") + getGamemodeOtherPlayerMessage("spectator", target));
-			} else
+			} else {
 				player.sendMessage(wrongCommand("Gamemode <gamemode> <Player-Name>"));
-		} else
+				return true;
+			}
+		} else {
 			player.sendMessage(wrongCommand("Gamemode <gamemode> <Player-Name>"));
-		return false;
+			return true;
+		}
+		return true;
 	}
 }
