@@ -8,6 +8,9 @@ LeaveMessage: true
 # List Warps with permission. If it's disabled, then every user can use the Command with no Permission.
 WarpsPermission: true
 
+# If this is enabled, you will be notified when a new version is released.
+CheckforUpdates: true
+
 Messages:
     # This Message Comes when JoinMessage is enabled
     JoinMessage: "The Player &6%player% &7has &2entered &7the Server."
