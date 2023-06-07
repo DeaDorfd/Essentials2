@@ -19,6 +19,8 @@ import de.deadorfd.commands.Warp_CMD;
 import de.deadorfd.commands.Warps_CMD;
 import de.deadorfd.commands.World_CMD;
 import de.deadorfd.listener.Player_Listener;
+import de.deadorfd.utils.Config;
+import de.deadorfd.utils.Metrics;
 import de.deadorfd.utils.WarpAPI;
 
 /**
@@ -57,6 +59,10 @@ public class Essentials2 extends JavaPlugin {
 		getCommand("Spawn").setExecutor(new Spawn_CMD());
 		getCommand("setSpawn").setExecutor(new Set_Spawn_CMD());
 		getCommand("Teleport").setExecutor(new Teleport_CMD());
+		Metrics metrics = new Metrics(instance, 18678);
+		metrics.addCustomChart(new Metrics.SimplePie("checkforupdates", () -> {
+			return Config.getBoolean("CheckforUpdates") + "";
+		}));
 	}
 
 	public static Essentials2 getInstance() {

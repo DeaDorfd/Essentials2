@@ -8,6 +8,9 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 import de.deadorfd.commands.Vanish_CMD;
+import de.deadorfd.utils.Check;
+import de.deadorfd.utils.Config;
+
 import static de.deadorfd.utils.Config.*;
 import static de.deadorfd.utils.Utils.*;
 
@@ -22,9 +25,10 @@ public class Player_Listener implements Listener {
 
 	@EventHandler
 	public void onPlayerJoinEvent(PlayerJoinEvent event) {
+		Player player = event.getPlayer();
 		if (!getBoolean("JoinMessage")) event.setJoinMessage(null);
 		if (getBoolean("JoinMessage"))
-			event.setJoinMessage(getString("Prefix") + getMessagePlayer("JoinMessage", event.getPlayer().getName()));
+			event.setJoinMessage(getString("Prefix") + getMessagePlayer("JoinMessage", player.getName()));
 		for (Player all : Bukkit.getOnlinePlayers()) {
 			if (Vanish_CMD.vanish.contains(all)) {
 				if (hasPermission(event.getPlayer(), "VanishSee")) {
@@ -33,6 +37,12 @@ public class Player_Listener implements Listener {
 					event.getPlayer().hidePlayer(all);
 				}
 			}
+		}
+		if (!Config.getBoolean("Check for Updates")) return;
+		if (Check.isUpdatet()) return;
+		if (player.hasPermission(Config.getPermission("Admin"))) {
+			player.sendMessage(
+					"§7This Plugin has an §2Update §7look at this page >§6 https://www.spigotmc.org/resources/72268/");
 		}
 	}
 
